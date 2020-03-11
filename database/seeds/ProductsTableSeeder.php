@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class ProductsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        factory(App\Product::class, 4)->create()->each(function ($product) {
+            factory(\App\Category::class, 5)->create()->each(
+                function ($category) use ($product){
+                    $category->products()->attach($product);
+                }
+            );
+        });
+    }
+}
