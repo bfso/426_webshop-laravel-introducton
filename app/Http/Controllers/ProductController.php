@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use Illuminate\Http\Request;
@@ -15,7 +16,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::get();
+        $products = Product::with('categories')->get();
+
+        // Filter categories
+//        foreach ($products as $product){
+//            Product::where('id',$product->id)->first();
+//        }
+
         return view('products.index', ['products' => $products]);
     }
 

@@ -27,7 +27,7 @@ class ProductTest extends DuskTestCase
                 ->visit(
                     $browser->attribute('#create-product-link', 'href')
                 )
-                ->assertSee('Form to create new Products')
+                ->assertSee('Form to cre ate new Products')
                 ->type('name',$name)
                 ->type('price',$price)
                 ->click('#submit');

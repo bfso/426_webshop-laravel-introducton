@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/webshop.iml" filepath="$PROJECT_DIR$/.idea/webshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/426_webshop-laravel-introducton.iml" filepath="$PROJECT_DIR$/.idea/426_webshop-laravel-introducton.iml" />
     </modules>
   </component>
 </project>
