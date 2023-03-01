@@ -29,7 +29,7 @@ class ProductFilterTest extends TestCase
     {
         // Create some random products.
         $filteredProducts = ProductFilter::run(
-            factory(Product::class, 100)->create()
+            Product::factory()->count(100)->make()
         );
 
         // Check if they containing "a" in the product name

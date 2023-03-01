@@ -20,7 +20,6 @@ class ProductsTest extends TestCase
         parent::setUp();
         $this->app = $this->createApplication();
         $this->setUpFaker();
-        $this->app->make('Illuminate\Database\Eloquent\Factory')->load(__DIR__ . '/../../database/factories');
         DB::beginTransaction();
     }
 
